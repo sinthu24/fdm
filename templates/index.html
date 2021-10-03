@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: #cccccc;
+        }
+
+        h1 {
+            text-align: center;
+            height: 30vh;
+            color: black;
+            font-family: Fantasy;
+        }
+
+        div {
+
+            label{
+                 text-align:center;
+                 }
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 20px;
+            padding-top: 300px;
+            padding-right: 30px;
+            padding-bottom: 50px;
+            padding-left: 1000px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 15px 25px;
+            font-size: 24px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: #fff;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 9px #999;
+        }
+
+
+
+        .dropbtn {
+            background-color: #eb723b;
+            width: 100%;
+            border-radius: 20px;
+            color: white;
+            padding: 10px;
+            font-size: 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown {
+            margin: 0;
+            position: absolute;
+            top: 20%;
+            left: 15%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 300px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+            .dropdown-content a {
+                background-color: #4CAF50; /* Green */
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+            }
+
+                .dropdown-content a:hover {
+                    background-color: #f1f1f1;
+                }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+        }
+
+    </style>
+    <title>Finding Suggestions Using Data Mining</title>
+</head>
+<body>
+
+    <form align="center" action="/send" method="POST">
+
+        <h1>Finding the recommendations related to each product </h1>
+        <br><br> <br><br><br> <br>
+
+        <div class="dropdown">
+        <br><br><br>
+        <label for="products">Enter the VALID product name:{{z|safe}}  </label>
+        <input type="text" id="product" name="product"><br><br>
+        <br>
+        <input class="btn btn-primary" type="submit" value="Configure">
+    </form>
+    <br><br>
+    {%for x in cons%}
+    <p>{{x|safe}}</p>
+    {%endfor%}
+</body>
+</html>

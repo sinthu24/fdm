@@ -1,2 +1,1 @@
-# fdm
-fdm_minproject
+# Association-Mining
